@@ -1,3 +1,4 @@
+// Código combinado ou resolvido
 <?php
 // Configurações do banco de dados
 /*
