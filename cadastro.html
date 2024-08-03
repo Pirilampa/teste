@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cidadão</title>
+</head>
+<body>
+<h1>Cadastro de Cidadão</h1>
+<form action="processa_cadastro.php" method="post">
+  <label for="cpfCidadao">CPF:</label>
+  <input type="text" id="cpfCidadao" name="cpfCidadao" maxlength="11" required><br>
+
+  <label for="nomeCidadao">Nome:</label>
+  <input type="text" id="nomeCidadao" name="nomeCidadao" maxlength="70" required><br>
+
+  <label for="cnsCidadao">CNS:</label>
+  <input type="text" id="cnsCidadao" name="cnsCidadao" maxlength="15"><br>
+
+  <label for="dataNascimentoCidadao">Data de Nascimento:</label>
+  <input type="date" id="dataNascimentoCidadao" name="dataNascimentoCidadao" required><br>
+
+  <label for="racaCor">Raça/Cor:</label>
+  <select id="racaCor" name="racaCor" required>
+    <option value="1">Branca</option>
+    <option value="2">Preta</option>
+    <option value="3">Amarela</option>
+    <option value="4">Parda</option>
+    <option value="5">Indígena</option>
+    <option value="6">Sem informação</option>
+  </select><br>
+
+  <label for="fone">Telefone:</label>
+  <input type="text" id="fone" name="fone" maxlength="11"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" maxlength="255"><br>
+
+  <label for="bairro">Bairro:</label>
+  <input type="text" id="bairro" name="bairro" maxlength="72" required><br>
+
+  <label for="cep">CEP:</label>
+  <input type="text" id="cep" name="cep" maxlength="8" required><br>
+
+  <label for="codigoIbgeMunicipio">Código IBGE do Município:</label>
+  <input type="text" id="codigoIbgeMunicipio" name="codigoIbgeMunicipio" maxlength="7" required><br>
+
+  <label for="complemento">Complemento:</label>
+  <input type="text" id="complemento" name="complemento" maxlength="30"><br>
+
+  <label for="nomeLogradouro">Nome do Logradouro:</label>
+  <input type="text" id="nomeLogradouro" name="nomeLogradouro" maxlength="72" required><br>
+
+  <label for="numero">Número:</label>
+  <input type="text" id="numero" name="numero" maxlength="10" required><br>
+
+  <label for="numeroDneUf">Número DNE UF:</label>
+  <input type="text" id="numeroDneUf" name="numeroDneUf" required><br>
+
+  <input type="submit" value="Cadastrar">
+</form>
+</body>
+</html>
+
+
+
+
