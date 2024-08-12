@@ -30,5 +30,6 @@ $cadastroCidadao->nomeLogradouro = isset($_POST['nomeLogradouro']) ? $_POST['nom
 $cadastroCidadao->numero = isset($_POST['numero']) ? $_POST['numero'] : '';
 $cadastroCidadao->numeroDneUf = isset($_POST['numeroDneUf']) ? $_POST['numeroDneUf'] : '';
 
+
 $resultado = $cadastroCidadao->criar_cadastroCidadao ();
 ?>
