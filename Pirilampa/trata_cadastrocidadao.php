@@ -3,7 +3,7 @@
 require __DIR__."/conexao-db.php";
 require __DIR__."/src/CadastroCidadao.php";
 
-$cadastroCidadao = new CadastroCidadao();
+$cadastroCidadao = new CadastroCidadao($conn);
 
 if (isset($_POST['dataNascimentoCidadao']) && !empty($_POST['dataNascimentoCidadao'])) {
     $dataNascimento = DateTime::createFromFormat('Y-m-d', $_POST['dataNascimentoCidadao']);
@@ -15,7 +15,6 @@ if (isset($_POST['dataNascimentoCidadao']) && !empty($_POST['dataNascimentoCidad
 } else {
     die('Erro: Data de nascimento não pode ser nula.');
 }
-
 
 $cadastroCidadao->cpfCidadao = isset($_POST['cpfCidadao']) ? $_POST['cpfCidadao'] : '';
 $cadastroCidadao->nomeCidadao = isset($_POST['nomeCidadao']) ? $_POST['nomeCidadao'] : '';
@@ -31,5 +30,5 @@ $cadastroCidadao->nomeLogradouro = isset($_POST['nomeLogradouro']) ? $_POST['nom
 $cadastroCidadao->numero = isset($_POST['numero']) ? $_POST['numero'] : '';
 $cadastroCidadao->numeroDneUf = isset($_POST['numeroDneUf']) ? $_POST['numeroDneUf'] : '';
 
-$cadastroCidadao = criar_cadastroCidadao ($cadastroCidadao);
+$resultado = $cadastroCidadao->criar_cadastroCidadao ();
 ?>
