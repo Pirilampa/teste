@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTS Cadastro</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+<!-- Ícone no topo à esquerda -->
+<img src="iconespts/govbr.png" alt="GOVBR Icon" class="top-icon">
+
+<!-- Linha fina no topo -->
+<div class="header-line"></div>
+
+<!-- Conteúdo Principal -->
+<div class="main-content">
+    <!-- Adicionando ícone e título PTS lado a lado -->
+
+
+    <!-- Detalhes do PTS -->
+    <h1 class="pts-cadastro">PTS CADASTRO</h1>
+    <p class="pts-description">*Projeto Terapêutico Singular (PTS)</p>
+</div>
+
+<!-- Seção do Formulário -->
+<div class="form-section">
+    <label for="nome" id="nome-label">Nome:</label>
+    <input type="text" id="nome" name="nome">
+
+    <div class="row">
+        <div class="column">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf">
+        </div>
+        <div class="column">
+            <label for="cns">CNS:</label>
+            <input type="text" id="cns">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label for="profissional">Identificação Profissional (ACS):</label>
+            <input type="text" id="profissional">
+        </div>
+        <div class="column">
+            <label for="saude">Unidade de Saúde (ESF):</label>
+            <input type="text" id="saude">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade">
+        </div>
+        <div class="column">
+            <label for="cid">HD (CID):</label>
+            <input type="text" id="cid">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label for="periodicidade" id="periodicidade-label">Periodicidade da Avaliação do PTS:</label>
+            <select id="periodicidade-select">
+                <option value="mensal">Mensal</option>
+                <option value="bimestral">Bimestral</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+<!-- Botões -->
+<div class="form-actions">
+    <button class="salvar">Salvar</button>
+    <button class="editar">Editar</button>
+    <button class="cancelar">Cancelar</button>
+</div>
+</body>
+</html>
