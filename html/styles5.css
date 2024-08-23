@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow-x: hidden; /* Esconde qualquer conteúdo que ultrapasse horizontalmente */
+
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Alinha os elementos à direita */
+    padding-top: 0px; /* Mantém o topo ajustado */
+    padding-left: 20px; /* Ajuste conforme necessário para mover mais à direita */
+    position: absolute; /* Posiciona no topo absoluto */
+
+    width: calc(100% - 40px); /* Garante que o conteúdo da header não ultrapasse a largura */
+
+    top: 20px; /* Ajusta a altura a partir do topo */
+    left: 20px; /* Ajusta a posição à direita */
+    width: calc(100% - 40px); /* Garante que o conteúdo da header não ultrapasse a largura */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+.logo {
+    width: 65px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Centraliza o ícone e o texto */
+    color: #00498E; /* Cor do texto */
+    font-size: 36px; /* Tamanho do texto */
+    font-weight: 600; /* Semibold */
+    margin-bottom: 20px; /* Ajusta o espaço abaixo do título */
+
+}
+.meu {
+    color: #FE763C;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sus {
+    color: #052EFF;
+    font-size: 22px;
+    font-weight: bold;
+    align-content: flex-start;
+}
+.digital {
+    color: #FE763C;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.divider {
+    width: 100%; /* Ocupa 100% da largura disponível no container */
+    border: 1px solid #EFEFEF;
+    margin-top: 20px; /* Ajuste conforme necessário para manter a linha abaixo do header */
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.icon {
+    width: 60px; /* Aumente conforme necessário */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.title-center {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: 600; /* Semibold */
+    color: #00498E; /* Cor do texto */
+    margin-top: 50px; /* Espaço superior para ajuste */
+}
+.icon-pts {
+    width: 50px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha verticalmente o ícone com o texto */
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 50px;
+    font-size: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 250px;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.btn:hover {
+    background-color:  #DDDDDD;
+}
+.btn:active {
+    background-color: #CCCCCC; /* Cor ao clicar */
+}
+/* gov.br */
+.footer {
+    margin-top: 70px;
+    font-size: 28px;
+    color: #0C73D2;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        position: static; /* Altera para static em telas menores */
+        top: auto;
+        left: auto;
+    }
+
+    .title {
+        align-items: center;
+        text-align: left;
+    }
+
+    .divider {
+        margin-top: 0px;
+    }
+
+    .title-center {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .logo {
+        width: 45px; /* Ajuste conforme necessário */
+        margin-top: 100px;
+    }
+
+    .footer {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+}
