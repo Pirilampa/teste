@@ -1,0 +1,173 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: Inter, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do contêiner principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Linha fina no topo */
+.header-line {
+    width: 100%;
+    border-top: 1px solid #EFEFEF;
+    margin-top: 70px;
+    margin-bottom: 20px; /* Adicione esta linha para criar um espaço entre o ícone e a linha */
+}
+
+/* Estilo do ícone e título PTS */
+.pts-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+.pts-title {
+    font-size: 20px;
+    color: #00407E;
+}
+
+/* Estilo do título e descrição do PTS Cadastro */
+.pts-cadastro {
+    font-size: 45px;
+    font-weight: bold;
+    color: #00407E;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.pts-description {
+    font-size: 22px;
+    margin-top: -10px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Estilo da seção do formulário */
+.form-section {
+    background-color: #fcfeff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 854px;
+    border: 1px solid #d9d9d9;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Estilo das linhas e colunas do formulário */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.column {
+    width: 48%; /* Permite 2 colunas lado a lado */
+
+}
+#periodicidade-select {
+    flex: 0 0 30%; /* Ajusta o select para ocupar 30% da linha */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transform: translateX(270px) translateY(-30px);
+
+}
+
+#periodicidade-label {
+    flex: 1; /* O label ocupará a maior parte da linha */
+    margin-right: 10px; /* Espaço entre o label e o select */
+    color: #333;
+}
+
+label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#periodicidade-label {
+    color: #333;
+}
+
+#periodicidade-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajuste para botões */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button, input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+button.salvar {
+    background-color: #00407E;
+    color: white;
+    box-shadow: none;
+    border: none;
+}
+
+button.editar {
+    background-color: #EEEEEE;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+button.cancelar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Estilo para ícone no topo */
+.top-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+}
