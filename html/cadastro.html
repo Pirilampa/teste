@@ -1,67 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Cidadão</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cidadão</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-<h1>Cadastro de Cidadão</h1>
-<form action="processa_cadastro.php" method="post">
-  <label for="cpfCidadao">CPF:</label>
-  <input type="text" id="cpfCidadao" name="cpfCidadao" maxlength="11" required><br>
+<!-- Adicionar Imagens e Texto -->
+<div class="header-container">
+    <img src="iconespts/govbr.png" alt="Imagem 1" class="top-image">
 
-  <label for="nomeCidadao">Nome:</label>
-  <input type="text" id="nomeCidadao" name="nomeCidadao" maxlength="70" required><br>
+</div>
 
-  <label for="cnsCidadao">CNS:</label>
-  <input type="text" id="cnsCidadao" name="cnsCidadao" maxlength="15"><br>
+<!-- Título do Formulário -->
+<h1 class="form-title">Cadastro de Usuário</h1>
 
-  <label for="dataNascimentoCidadao">Data de Nascimento:</label>
-  <input type="date" id="dataNascimentoCidadao" name="dataNascimentoCidadao" required><br>
+<!-- Contêiner do Formulário -->
+<div class="form-container">
+    <form action="processa_cadastro.php" method="post">
+        <div class="form-group">
+            <label for="cpfCidadao">CPF:</label>
+            <input type="text" id="cpfCidadao" name="cpfCidadao" maxlength="11" required>
+        </div>
 
-  <label for="racaCor">Raça/Cor:</label>
-  <select id="racaCor" name="racaCor" required>
-    <option value="1">Branca</option>
-    <option value="2">Preta</option>
-    <option value="3">Amarela</option>
-    <option value="4">Parda</option>
-    <option value="5">Indígena</option>
-    <option value="6">Sem informação</option>
-  </select><br>
+        <div class="form-group">
+            <label for="nomeCidadao">Nome:</label>
+            <input type="text" id="nomeCidadao" name="nomeCidadao" maxlength="70" required>
+        </div>
 
-  <label for="fone">Telefone:</label>
-  <input type="text" id="fone" name="fone" maxlength="11"><br>
+        <div class="form-group">
+            <label for="cnsCidadao">CNS:</label>
+            <input type="text" id="cnsCidadao" name="cnsCidadao" maxlength="15">
+        </div>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" maxlength="255"><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dataNascimentoCidadao">Data de Nascimento:</label>
+                <input type="date" id="dataNascimentoCidadao" name="dataNascimentoCidadao" required>
+            </div>
+            <div class="form-group">
+                <label for="racaCor">Raça/Cor:</label>
+                <select id="racaCor" name="racaCor" required>
+                    <option value="1">Branca</option>
+                    <option value="2">Preta</option>
+                    <option value="3">Amarela</option>
+                    <option value="4">Parda</option>
+                    <option value="5">Indígena</option>
+                    <option value="6">Sem informação</option>
+                </select>
+            </div>
+        </div>
 
-  <label for="bairro">Bairro:</label>
-  <input type="text" id="bairro" name="bairro" maxlength="72" required><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fone">Telefone:</label>
+                <input type="text" id="fone" name="fone" maxlength="11">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" maxlength="255">
+            </div>
+        </div>
 
-  <label for="cep">CEP:</label>
-  <input type="text" id="cep" name="cep" maxlength="8" required><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" maxlength="72" required>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="8" required>
+            </div>
+        </div>
 
-  <label for="codigoIbgeMunicipio">Código IBGE do Município:</label>
-  <input type="text" id="codigoIbgeMunicipio" name="codigoIbgeMunicipio" maxlength="7" required><br>
+        <div class="form-group">
+            <label for="codigoIbgeMunicipio">Código IBGE do Município:</label>
+            <input type="text" id="codigoIbgeMunicipio" name="codigoIbgeMunicipio" maxlength="7" required>
+        </div>
 
-  <label for="complemento">Complemento:</label>
-  <input type="text" id="complemento" name="complemento" maxlength="30"><br>
+        <div class="form-group">
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" maxlength="30">
+        </div>
 
-  <label for="nomeLogradouro">Nome do Logradouro:</label>
-  <input type="text" id="nomeLogradouro" name="nomeLogradouro" maxlength="72" required><br>
+        <div class="form-group">
+            <label for="nomeLogradouro">Nome do Logradouro:</label>
+            <input type="text" id="nomeLogradouro" name="nomeLogradouro" maxlength="72" required>
+        </div>
 
-  <label for="numero">Número:</label>
-  <input type="text" id="numero" name="numero" maxlength="10" required><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="numeroDneUf">Número DNE UF:</label>
+                <input type="text" id="numeroDneUf" name="numeroDneUf" required>
+            </div>
+        </div>
+    </form>
+</div>
 
-  <label for="numeroDneUf">Número DNE UF:</label>
-  <input type="text" id="numeroDneUf" name="numeroDneUf" required><br>
+<!-- Botões -->
+<div class="form-actions">
+    <input type="submit" class="Salvar" value="Salvar">
+    <button type="button" class="editar">Editar</button>
+    <button type="button" class="cancelar">Cancelar</button>
+</div>
 
-  <input type="submit" value="Cadastrar">
-</form>
 </body>
 </html>
-
-
-
-
