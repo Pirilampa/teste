@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTS Cadastro</title>
+    <link rel="stylesheet" href="consultaptspaciente.css">
+</head>
+<body>
+
+
+
+<div class="sidebar">
+    <div class="header-sidebar">
+        <img src="iconespts/sus.png" alt="Logo Meu SUS Digital" class="logo">
+        <div class="title">
+            <span class="meu">Meu</span>
+            <span class="sus">SUS</span>
+            <span class="digital">Digital</span>
+        </div>
+    </div>
+
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <!-- Menu "Sistema" com sub-opções recolhíveis -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">Sistema</a>
+            <ul class="submenu">
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Consulta</a></li>
+            </ul>
+        </li>
+        <!-- Menu "PTS" com sub-opções recolhíveis -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">PTS</a>
+            <ul class="submenu">
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Consulta</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="menu.js"></script>
+<!-- Conteúdo Principal -->
+<div class="main-content">
+
+    <div class="breadcrumbs">
+        PTS &gt; Consulta Paciente
+    </div>
+
+    <!-- Detalhes do PTS -->
+    <h1 class="pts-cadastro">Consulta PTS Paciente</h1>
+    <p class="pts-description">*Buscar Paciente</p>
+
+    <div class="input-group">
+        <input type="text" id="buscarcpts" name="buscarcpts" placeholder="Digite aqui o Nome, CPF ou CNS...">
+        <button class="search-button">
+            <img src="iconespts/buscar.png" alt="Buscar Icon" class="buscaricon">
+        </button>
+    </div>
+</div>
+
+<!-- Botões -->
+<div class="form-actions">
+    <button class="consultar">Consultar</button>
+    <button class="limpar">Limpar</button>
+
+</div>
+
+
+
+</html>

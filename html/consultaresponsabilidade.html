@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTS Cadastro</title>
+    <link rel="stylesheet" href="consultaresponsabilidade.css">
+</head>
+<body>
+
+
+
+<div class="sidebar">
+    <div class="header-sidebar">
+        <img src="iconespts/sus.png" alt="Logo Meu SUS Digital" class="logo">
+        <div class="title">
+            <span class="meu">Meu</span>
+            <span class="sus">SUS</span>
+            <span class="digital">Digital</span>
+        </div>
+    </div>
+
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <!-- Menu "Sistema" com sub-opções recolhíveis -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">Sistema</a>
+            <ul class="submenu">
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Consulta</a></li>
+            </ul>
+        </li>
+        <!-- Menu "PTS" com sub-opções recolhíveis -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">PTS</a>
+            <ul class="submenu">
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Consulta</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="menu.js"></script>
+
+<!-- Conteúdo Principal -->
+<div class="main-content">
+    <!-- Adicionando ícone e título PTS lado a lado -->
+
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <h1 class="pts-cadastro">Consulta Responsabilidade</h1>
+        <p class="pts-description">*Projeto Terapêutico Singular (PTS)</p>
+
+        <!-- Formulário de busca -->
+        <form action="consultaresponsabilidade.css" method="POST" class="search-form">
+            <label for="busca">Buscar Responsabilidade:</label>
+            <input type="text" id="busca" name="busca" placeholder="Nome do profissional">
+            <input type="submit" value="Buscar">
+        </form>
+
+        <!-- Tabela de Resultados -->
+        <table class="fatores-table">
+            <thead>
+            <tr>
+                <th>Ações</th>
+                <th>Profissional</th>
+                <th>Como</th>
+                <th>Onde</th>
+                <th>----</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- As linhas da tabela serão preenchidas pelo PHP -->
+            <!-- Exemplo de linha estática -->
+            <tr>
+                <td>Exemplo de ação</td>
+                <td>Exemplo de profissional</td>
+                <td>Exemplo de como</td>
+                <td>Exemplo de Onde</td>
+                <td class="action-buttons">
+                    <form action="editar_cresponsa.php" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="1">
+                        <button class="editar">Editar</button>
+                    </form>
+                    <form action="excluir_cresponsa.php" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="1">
+                        <button class="excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</html>

@@ -1,0 +1,720 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: Inter, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilo do contêiner principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px auto;
+
+    padding: 20px;
+    width: calc(100% - 300px); /* O conteúdo ocupa quase toda a tela, subtraindo a sidebar */
+    max-width: 900px;
+}
+
+.container {
+    display: flex;              /* Torna o container um flex container */
+    flex-direction: column;     /* Alinha os itens em coluna */
+    align-items: flex-end;     /* Alinha os itens à direita */
+
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+
+
+
+/* Estilo do grupo de input com ícone */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    margin-top: -45px; /* Sobe o campo de preenchimento */
+    width: 60%; /* Garante que o grupo ocupe toda a largura disponível */
+    transform: translateX(20px);
+}
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px; /* Padding interno do botão */
+    border-radius: 0 5px 5px 0; /* Arredonda as bordas direitas */
+    margin-bottom: 30px;
+    transform: translateX(360px);
+
+}
+
+.buscaricon {
+    width: 50px; /* Tamanho do ícone */
+    height: 50px;
+    margin-top: 20px;
+    transform: translateX(-80px);
+}
+
+.pts-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+
+}
+
+input::placeholder {
+    font-style: italic;  /* Define o texto como itálico */
+    color: #646366;  /* Define a cor do texto */
+    opacity: 0.7;  /* Ajusta a opacidade para tornar o texto mais sutil */
+    text-align: center;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    transform: translateX(300px);
+
+
+}
+
+label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+    color: #333;
+
+}
+
+
+/* Estilo do título e descrição do PTS Cadastro */
+.pts-cadastro {
+    font-size: 27px;
+    font-weight: bold;
+    color: #00407E;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 100px; /* Aumenta o espaço acima para mover para baixo */
+    transform: translateX(400px);
+}
+
+.pts-description {
+    font-size: 22px;
+    margin-top: -10px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 40px;
+    transform: translateX(450px);
+}
+
+/* Estilo para o novo texto "PTS > Consulta Paciente" */
+.breadcrumbs {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins */
+    font-weight: 500; /* Define como Medium (peso 500) */
+    color: #00407E; /* Define a cor como azul #00407E */
+    font-size: 18px; /* Tamanho da fonte (ajuste conforme necessário) */
+    margin-bottom: 10px; /* Espaço inferior antes do título principal */
+    margin-top: 20px; /* Ajuste para controlar a distância do topo */
+    text-align: left; /* Alinha o texto à esquerda */
+    transform: translateX(80px); /* Move o texto para a esquerda (ajuste conforme necessário) */
+}
+
+
+/* Ajuste para botões */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -110px;
+    width: 100%;
+    transform: translateX(90px);
+}
+
+button, input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+button.consultar {
+    background-color: #00407E;
+    color: white;
+    box-shadow: none;
+    border: none;
+}
+
+button.limpar {
+    background-color: #EEEEEE;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+
+/* Estilo do menu lateral */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #ccc;
+    z-index: 999;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar ul li a {
+    color: #00407E;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.submenu {
+    padding-left: 30px; /* Remover a indentação extra */
+    display: none; /* Submenu escondido por padrão */
+    background-color: #FFFFFF;
+}
+
+.submenu li {
+    padding: 10px 20px; /* Espaçamento ajustado */
+    border-bottom: 1px solid #ccc; /* Linha cinza abaixo de cada item */
+}
+
+/* Mostrar submenu ao clicar */
+.sidebar ul li.active > .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    color: #333; /* Texto em cinza escuro */
+    text-decoration: none; /* Remover sublinhado */
+    width: 100%;
+    background-color: transparent; /* Sem cor de fundo por padrão */
+    padding: 5px 15px; /* Mantém o espaçamento interno */
+}
+
+.submenu li a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    color: #666; /* Cor do texto ao passar o mouse */
+}
+
+/* Efeito ao clicar (ativo) */
+.submenu li a:active, .submenu li.active > a {
+    background-color: #00407E; /* Cor de fundo quando o item está ativo/clicado */
+    color: white; /* Cor do texto quando clicado */
+}
+
+.sidebar ul li:hover {
+    background-color: #f5f5f5;
+}
+
+.sidebar ul li.active > a,
+.sidebar ul li a:hover {
+    background-color: #00407E;
+    color: white;
+    border-right: none;
+}
+
+.dropdown-btn::after {
+    content: "\25BC";
+    float: right;
+    margin-right: 10px;
+}
+
+.dropdown-btn.active::after {
+    content: "\25B2";
+}
+
+/* Submenu escondido inicialmente */
+.submenu {
+    display: none;
+    background-color: #f0f0f0;
+    padding-left: 30px; /* Indentação para parecer uma camada secundária */
+}
+
+/* Mostrar submenu quando o pai estiver ativo */
+.sidebar ul li.active > .submenu {
+    display: block; /* Já está implementado, mantém o submenu visível quando a classe "active" for adicionada */
+}
+
+.logo {
+    width: 80px; /* Ajuste conforme necessário */
+    display: flex; /* Para que os textos também fiquem em linha */
+    flex-direction: row; /* Direção em linha */
+    align-items: center; /* Centraliza verticalmente os textos */
+    margin-bottom: 80px; /* Espaço entre o logo e o texto */
+    margin-left:    10px;
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: 600; /* Semibold */
+}
+
+.header-sidebar {
+    display: flex; /* Alinha os elementos em uma linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start;
+    margin-bottom: 10px; /* Espaço entre o cabeçalho e o menu */
+    padding: 10px 10px; /* Espaçamento interno no cabeçalho */
+    border-bottom: 1px solid #ccc; /* Linha separadora abaixo do cabeçalho */
+    margin-left: 25px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    color: #00498E; /* Cor do texto */
+    font-size: 20px; /* Tamanho do texto */
+    font-weight: 600; /* Semibold */
+    margin-bottom: 70px; /* Ajusta o espaço abaixo do título */
+    margin-left: 10px; /* Adiciona espaço à esquerda do texto */
+}
+
+.meu {
+    color: #FE763C; /* Cor do texto "Meu" */
+}
+
+.sus {
+    color: #052EFF; /* Cor do texto "SUS" */
+    font-weight: bold; /* Estilo em negrito para "SUS" */
+}
+
+.digital {
+    color: #FE763C; /* Cor do texto "Digital" */
+}
+
+
+/* Estilo dos ícones */
+.icon-actions {
+    display: flex;
+    gap: -30px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os ícones na célula */
+    margin-bottom: -10px;
+    align-items: center; /* Garante que eles se alinhem ao centro verticalmente */
+    margin-top: 20px; /* Desce os ícones */
+
+}
+
+.action-btn {
+    background-color: transparent; /* Botão transparente */
+    border: none; /* Remove as bordas padrão */
+    cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+}
+
+.action-btn img {
+    width: 24px; /* Tamanho dos ícones */
+    transform: translateY(-10px); /* Move o ícone 5px para cima */
+}
+
+.action-btn:hover img {
+    opacity: 0.8; /* Efeito de hover nos ícones */
+}
+
+
+
+table {
+    width: 100%;
+    max-width: 900px; /* Limita a largura da tabela para 900px */
+    border-collapse: collapse;
+    transform: translateX(350px); /* Ajuste de posição */
+
+}
+
+th, td {
+    border: 1px solid #00407e;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top; /* Move o conteúdo para o topo */
+    margin-top: -20px;
+}
+td {
+    padding-top: 15px; /* Aumente o valor conforme necessário */
+    line-height: 1.5; /* Ajuste conforme necessário */
+
+}
+
+th {
+    background-color: #00407e;
+    color: white;
+}
+
+tbody tr {
+    background-color: white;
+}
+
+tbody tr td img {
+    width: 24px;
+    height: 24px;
+}
+
+td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Estilizando os botões de ação */
+button.btn-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+button.btn-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Adicionando um efeito de hover */
+button.btn-icon:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+.voltabotao {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    text-align: center; /* Centraliza o botão */
+    transform: translateX(120px);
+}
+
+.voltar {
+    display: inline-block; /* Para que o botão tenha um tamanho adequado */
+    padding: 12px 30px; /* Aumente o padding para mais espaço horizontal */
+    background-color: #dc3545; /* Cor de fundo vermelha */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 15px; /* Borda arredondada */
+    cursor: pointer; /* Mão ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.voltar:hover {
+    background-color: #c82333; /* Cor ao passar o mouse */
+}
+
+
+/* Responsividade para outros navegadores */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Ajustes específicos para o Internet Explorer/Edge */
+    .main-content {
+        width: calc(100% - 300px);
+        max-width: 900px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
+
+@supports (-webkit-appearance:none) {
+    /* Ajustes específicos para navegadores WebKit (Safari, Chrome) */
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
+
+@-moz-document url-prefix() {
+    /* Ajustes específicos para Firefox */
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
+/* Ajustes gerais para dispositivos móveis e tablets */
+@media (max-width: 1024px) {
+    /* Tablets */
+    .main-content {
+        width: calc(100% - 50px); /* Reduzindo a margem lateral */
+        padding: 10px;
+    }
+
+    .input-group {
+        width: 90%; /* Expande o campo de input */
+        transform: translateX(0); /* Centraliza no tablet */
+    }
+
+    .search-button {
+        transform: translateX(0);
+        padding: 10px 10px; /* Ajusta o tamanho do botão */
+    }
+
+    .buscaricon {
+        transform: translateX(0);
+        width: 40px; /* Reduz tamanho do ícone */
+        height: 40px;
+    }
+
+    .pts-cadastro, .pts-description {
+        transform: translateX(0); /* Centraliza os títulos */
+        margin-top: 40px;
+    }
+
+    table {
+        transform: translateX(0); /* Centraliza a tabela */
+        max-width: 100%; /* Garante que a tabela não exceda a largura da tela */
+    }
+
+    .voltabotao {
+        transform: translateX(0); /* Centraliza o botão */
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Celulares (Portrait e Landscape) */
+    .main-content {
+        width: 100%; /* Ocupa toda a largura da tela */
+        padding: 10px;
+    }
+
+    .container {
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .input-group {
+        width: 100%; /* Ocupa 100% da tela */
+        transform: translateX(0); /* Centraliza o input */
+    }
+
+    .search-button {
+        transform: translateX(0);
+        padding: 8px 10px; /* Botão menor */
+    }
+
+    .buscaricon {
+        width: 35px; /* Ícone ainda menor para celulares */
+        height: 35px;
+        transform: translateX(0);
+    }
+
+    .pts-cadastro {
+        font-size: 20px; /* Tamanho do título reduzido */
+        transform: translateX(0);
+    }
+
+    .pts-description {
+        font-size: 16px; /* Reduz tamanho da descrição */
+        transform: translateX(0);
+    }
+
+    table {
+        width: 100%; /* A tabela ocupa 100% da tela */
+        font-size: 10px; /* Texto menor na tabela */
+        transform: translateX(0);
+    }
+
+    th, td {
+        padding: 8px; /* Menos espaçamento entre as células */
+    }
+
+    .voltabotao {
+        transform: translateX(0); /* Centraliza o botão */
+        margin-top: 20px;
+    }
+
+    button, input[type="submit"] {
+        padding: 8px 15px; /* Botões menores */
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para outros navegadores */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Ajustes específicos para o Internet Explorer/Edge */
+    .main-content {
+        width: calc(100% - 300px);
+        max-width: 900px;
+    }
+
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
+
+@supports (-webkit-appearance:none) {
+    /* Ajustes específicos para navegadores WebKit (Safari, Chrome) */
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
+
+@-moz-document url-prefix() {
+    /* Ajustes específicos para Firefox */
+    .input-group {
+        width: 60%;
+        transform: translateX(20px);
+    }
+
+    .search-button {
+        transform: translateX(360px);
+    }
+
+    .pts-cadastro {
+        transform: translateX(400px);
+    }
+
+    .pts-description {
+        transform: translateX(450px);
+    }
+
+    table {
+        transform: translateX(350px);
+    }
+
+    .voltabotao {
+        transform: translateX(120px);
+    }
+}
